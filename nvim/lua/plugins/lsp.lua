@@ -98,17 +98,17 @@ return {
 				},
 				html = {},
 
-				clangd = {
-					cmd = { "clangd", "--background-index", "--suggest-missing-includes" },
-					filetypes = { "c", "cpp", "objc", "objcpp" },
-					root_dir = function(fname)
-						return lspconfig.util.root_pattern("compile_commands.json", ".git")(fname)
-							or lspconfig.util.path.dirname(fname)
-					end,
-					on_attach = function(client, bufnr)
-						client.server_capabilities.offsetEncoding = { "utf-16" }
-					end,
-				},
+				-- clangd = {
+				-- 	cmd = { "clangd", "--background-index", "--suggest-missing-includes" },
+				-- 	filetypes = { "c", "cpp", "objc", "objcpp" },
+				-- 	root_dir = function(fname)
+				-- 		return lspconfig.util.root_pattern("compile_commands.json", ".git")(fname)
+				-- 			or lspconfig.util.path.dirname(fname)
+				-- 	end,
+				-- 	on_attach = function(client, bufnr)
+				-- 		client.server_capabilities.offsetEncoding = { "utf-16" }
+				-- 	end,
+				-- },
 
 				lua_ls = {
 					-- enabled = false,
