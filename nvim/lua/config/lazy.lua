@@ -4,7 +4,6 @@ if not vim.loop.fs_stat(lazypath) then
 		"git",
 		"clone",
 		"--filter=blob:none",
-		--"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable",
 		lazypath,
 	})
@@ -36,10 +35,6 @@ require("lazy").setup({
 		lazy = false,
 		version = false,
 	},
-
-	-- dev = {
-	-- 	path = "~/.ghq/github.com",
-	-- },
 
 	checker = { enabled = true },
 	performance = {

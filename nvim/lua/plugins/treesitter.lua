@@ -17,6 +17,10 @@ return {
 				"lua",
 				"c",
 				"cpp",
+				"ninja",
+				"python",
+				"rst",
+				"toml",
 			},
 			query_linter = {
 				enable = true,

@@ -63,9 +63,24 @@ return {
 				cssls = {},
 				tailwindcss = {
 					root_dir = function(...)
-						return require("lspconfig.util").root_pattern(".git")(...)
+						return require("lspconfig.util").root_pattern("tailwind.config.js", ".git")(...)
 					end,
+					settings = {
+						tailwindCSS = {
+							lint = {
+								cssConflict = "warning",
+								invalidApply = "error",
+								invalidScreen = "error",
+								invalidVariant = "error",
+								invalidConfigPath = "error",
+								invalidTailwindDirective = "error",
+								recommendedVariantOrder = "warning",
+							},
+							validate = true,
+						},
+					},
 				},
+
 				tsserver = {
 					root_dir = function(...)
 						return require("lspconfig.util").root_pattern(".git")(...)
@@ -96,19 +111,19 @@ return {
 						},
 					},
 				},
-				html = {},
-
-				-- clangd = {
-				-- 	cmd = { "clangd", "--background-index", "--suggest-missing-includes" },
-				-- 	filetypes = { "c", "cpp", "objc", "objcpp" },
-				-- 	root_dir = function(fname)
-				-- 		return lspconfig.util.root_pattern("compile_commands.json", ".git")(fname)
-				-- 			or lspconfig.util.path.dirname(fname)
-				-- 	end,
-				-- 	on_attach = function(client, bufnr)
-				-- 		client.server_capabilities.offsetEncoding = { "utf-16" }
-				-- 	end,
-				-- },
+				html = {
+					filetypes = { "html", "htm" },
+					settings = {
+						html = {
+							suggest = {
+								html5 = true,
+								angular1 = false,
+								ionic = false,
+								jquery = false,
+							},
+						},
+					},
+				},
 
 				lua_ls = {
 					-- enabled = false,
@@ -176,16 +191,6 @@ return {
 					},
 				},
 			},
-			-- setup = {
-			-- 	clangd = function(_, opts)
-			-- 		local clangd_ext_opts = require("lazyvim.util").opts("clangd_extensions.nvim")
-			-- 		require("clangd_extensions").setup(
-			-- 			vim.tbl_deep_extend("force", clangd_ext_opts or {}, { server = opts })
-			-- 		)
-			-- 		return false
-			-- 	end,
-			-- },
-
 			setup = {
 				clangd = function(_, opts)
 					local clangd_ext_opts = require("lazyvim.util").opts("clangd_extensions.nvim")
