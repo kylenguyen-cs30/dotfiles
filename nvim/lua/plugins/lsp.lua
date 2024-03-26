@@ -23,6 +23,30 @@ return {
 			---@type lspconfig.options
 			servers = {
 
+				pyright = {
+					enabled = vim.g.lazyvim_python_lsp ~= "basedpyright",
+				},
+				basedpyright = {
+					enabled = vim.g.lazyvim_python_lsp == "basedpyright",
+				},
+				ruff_lsp = {
+					keys = {
+						{
+							"<leader>co",
+							function()
+								vim.lsp.buf.code_action({
+									apply = true,
+									context = {
+										only = { "source.organizeImports" },
+										diagnostics = {},
+									},
+								})
+							end,
+							desc = "Organize Imports",
+						},
+					},
+				},
+
 				clangd = {
 					keys = {
 						{ "<leader>cR", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
@@ -198,6 +222,15 @@ return {
 						vim.tbl_deep_extend("force", clangd_ext_opts or {}, { server = opts })
 					)
 					return false
+				end,
+
+				ruff_lsp = function()
+					LazyVim.lsp.on_attach(function(client, _)
+						if client.name == "ruff_lsp" then
+							-- Disable hover in favor of Pyright
+							client.server_capabilities.hoverProvider = false
+						end
+					end)
 				end,
 			},
 		},
