@@ -21,6 +21,7 @@ return {
 				"python",
 				"rst",
 				"toml",
+				"svelte",
 			},
 			query_linter = {
 				enable = true,
