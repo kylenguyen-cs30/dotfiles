@@ -26,6 +26,24 @@ return {
 
 				pyright = {
 					enabled = vim.g.lazyvim_python_lsp ~= "basedpyright",
+					on_attach = function(client, bufnr)
+						if client.name == "pyright" then
+							vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+							vim.api.nvim_create_autocmd("BufWritePre", {
+								group = augroup,
+								buffer = bufnr,
+								callback = function()
+									vim.lsp.buf.format({
+										async = false,
+										filter = function(client)
+											return client.name == "pyright"
+										end,
+										timeout_ms = 5000,
+									})
+								end,
+							})
+						end
+					end,
 				},
 				basedpyright = {
 					enabled = vim.g.lazyvim_python_lsp == "basedpyright",
@@ -46,6 +64,24 @@ return {
 							desc = "Organize Imports",
 						},
 					},
+					on_attach = function(client, bufnr)
+						if client.name == "ruff_lsp" then
+							vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+							vim.api.nvim_create_autocmd("BufWritePre", {
+								group = augroup,
+								buffer = bufnr,
+								callback = function()
+									vim.lsp.buf.format({
+										async = false,
+										filter = function(client)
+											return client.name == "ruff_lsp"
+										end,
+										timeout_ms = 5000,
+									})
+								end,
+							})
+						end
+					end,
 				},
 
 				clangd = {
@@ -257,3 +293,22 @@ return {
 		end,
 	},
 }
+
+--
+-- ruff_lsp = {
+-- 					keys = {
+-- 						{
+-- 							"<leader>co",
+-- 							function()
+-- 								vim.lsp.buf.code_action({
+-- 									apply = true,
+-- 									context = {
+-- 										only = { "source.organizeImports" },
+-- 										diagnostics = {},
+-- 									},
+-- 								})
+-- 							end,
+-- 							desc = "Organize Imports",
+-- 						},
+-- 					},
+-- 				},
