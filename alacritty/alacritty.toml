@@ -3,11 +3,13 @@
 import = [
   # uncomment the flavour you want below:
   # "~/.config/alacritty/catppuccin-latte.toml"
-  #"~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
   # "~/.config/alacritty/catppuccin-macchiato.toml"
   # "~/.config/alacritty/catppuccin-mocha.toml"
-  #"~/.config/alacritty/base16_default_dark.toml"
+  # "~/.config/alacritty/base16_default_dark.toml"
   "~/.config/alacritty/aura.toml"
+  # "~/.config/alacritty/blood_moon.toml"
+  # "~/.config/alacritty/ashes_dark.toml"
 ]
 
 [env]
@@ -28,7 +30,7 @@ family = "FiraCode Nerd Font"
   
     decorations = "buttonless"
 
-    opacity = 0.9
+    opacity = 0.8
 
     blur = true
 
