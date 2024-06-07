@@ -10,8 +10,8 @@ import = [
   # "~/.config/alacritty/aura.toml"
   # "~/.config/alacritty/blood_moon.toml"
   # "~/.config/alacritty/ashes_dark.toml"
-  # "~/.config/alacritty/google.toml"
-  "~/.config/alacritty/iterm.toml"
+  "~/.config/alacritty/google.toml"
+  # "~/.config/alacritty/iterm.toml"
 ]
 
 [env]
@@ -20,7 +20,7 @@ import = [
 
 
 [font]
-size = 17
+size = 14
 
 [font.normal]
 family = "FiraCode Nerd Font Mono"
@@ -32,9 +32,9 @@ family = "FiraCode Nerd Font Mono"
   
     decorations = "buttonless"
 
-    opacity = 0.8
+    opacity = 1
 
-    blur = true
+    blur = false
 
     startup_mode = "Windowed"
 
