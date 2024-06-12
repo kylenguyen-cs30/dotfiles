@@ -5,18 +5,17 @@ import = [
   # "~/.config/alacritty/catppuccin-latte.toml"
   # "~/.config/alacritty/catppuccin-frappe.toml"
   # "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-mocha.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml",
   # "~/.config/alacritty/base16_default_dark.toml"
   # "~/.config/alacritty/aura.toml"
   # "~/.config/alacritty/blood_moon.toml"
   # "~/.config/alacritty/ashes_dark.toml"
-  "~/.config/alacritty/google.toml"
+  # "~/.config/alacritty/google.toml"
   # "~/.config/alacritty/iterm.toml"
 ]
 
 [env]
-  TERM = "xterm-256color"
-  
+TERM = "xterm-256color"
 
 
 [font]
@@ -28,40 +27,36 @@ family = "FiraCode Nerd Font Mono"
 [window]
 
 
-    padding = {x = 12, y = 12}
-  
-    decorations = "buttonless"
+padding = { x = 12, y = 12 }
 
-    opacity = 1
+decorations = "buttonless"
 
-    blur = false
+opacity = 1
 
-    startup_mode = "Windowed"
+blur = false
 
-    dynamic_padding = true
+startup_mode = "Windowed"
+
+dynamic_padding = true
 
 [selection]
-  
-  save_to_clipboard = true
+
+save_to_clipboard = true
 
 [cursor]
-  style = "Block"
-  # cursor_style = "BlinkingBeam"
-  # blinking = true
-  
-  unfocused_hollow = false
-  
-  thickness = 0.15
+style = "Block"
+# cursor_style = "BlinkingBeam"
+# blinking = true
 
-  # animated = true
+unfocused_hollow = false
 
-  blink_interval = 500
-  
+thickness = 0.15
 
-  
+# animated = true
+
+blink_interval = 500
+
 
 # key bind for slelect all the text 
 # [key_bindings]
 #   { key = "A" , mods = "Control|Shift", action = "SelectAll"}
-
-
