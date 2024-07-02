@@ -1,3 +1,5 @@
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 return {
   -- tools
   {
@@ -12,7 +14,7 @@ return {
         "css-lsp",
         "clangd",
         "svelte-language-server",
-        -- "ruff_lsp",
+        -- "ruff-lsp",
         "black",
         "pyright",
       })
@@ -27,8 +29,10 @@ return {
       ---@type lspconfig.options
       servers = {
 
+        -- pyright lsp
         pyright = {
           enabled = vim.g.lazyvim_python_lsp ~= "basedpyright",
+          -- enabled = lsp == "pyright",
           on_attach = function(client, bufnr)
             if client.name == "pyright" then
               vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -45,49 +49,70 @@ return {
                   })
                 end,
               })
+              if client.server_capabilities.inlayHintsProvider then
+                vim.lsp.buf.inlay_hint(bufnr, true)
+              end
             end
           end,
         },
+
+        -- basedpyright
         basedpyright = {
           enabled = vim.g.lazyvim_python_lsp == "basedpyright",
+          -- enabled = lsp == "basedpyright",
         },
 
         -- python lint and inlayHints
-        ruff_lsp = {
-          keys = {
-            {
-              "<leader>co",
-              function()
-                vim.lsp.buf.code_action({
-                  apply = true,
-                  context = {
-                    only = { "source.organizeImports" },
-                    diagnostics = {},
-                  },
-                })
-              end,
-              desc = "Organize Imports",
-            },
-          },
-          on_attach = function(client, bufnr)
-            if client.name == "ruff_lsp" then
-              vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-              vim.api.nvim_create_autocmd("BufWritePre", {
-                group = augroup,
-                buffer = bufnr,
-                callback = function()
-                  vim.lsp.buf.format({
-                    async = false,
-                    filter = function(client)
-                      return client.name == "ruff_lsp"
-                    end,
-                    timeout_ms = 5000,
-                  })
-                end,
-              })
-            end
-          end,
-        },
+        -- ruff_lsp = {
+        --   enabled = vim.g.lazyvim_python_ruff == "ruff_lsp",
+        --   -- enabled = lsp == "ruff_lsp",
+        --   keys = {
+        --     {
+        --       "<leader>co",
+        --       function()
+        --         vim.lsp.buf.code_action({
+        --           apply = true,
+        --           context = {
+        --             only = { "source.organizeImports" },
+        --             diagnostics = {},
+        --           },
+        --         })
+        --       end,
+        --       desc = "Organize Imports",
+        --     },
+        --   },
+        --   on_attach = function(client, bufnr)
+        --     if client.name == "ruff_lsp" then
+        --       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        --       vim.api.nvim_create_autocmd("BufWritePre", {
+        --         group = augroup,
+        --         buffer = bufnr,
+        --         callback = function()
+        --           vim.lsp.buf.format({
+        --             async = false,
+        --             filter = function(client)
+        --               return client.name == "ruff_lsp"
+        --             end,
+        --             timeout_ms = 5000,
+        --           })
+        --         end,
+        --       })
+        --       if client.server_capabilities.inlayHintsProvider then
+        --         vim.lsp.buf.inlay_hints(bufnr, true)
+        --       end
+        --     end
+        --   end,
+        -- },
+
+        -- [ruff] = {
+        --   keys = {
+        --     {
+        --       "<leader>co",
+        --       LazyVim.lsp.action["source.organizeImports"],
+        --       desc = "Organize Imports",
+        --     },
+        --   },
+        -- },
 
         -- C/C++ inlayHints
         clangd = {
@@ -279,18 +304,17 @@ return {
           return false
         end,
 
-        ruff_lsp = function()
-          LazyVim.lsp.on_attach(function(client, _)
-            if client.name == "ruff_lsp" then
-              -- Disable hover in favor of Pyright
-              client.server_capabilities.hoverProvider = false
-            end
-          end)
-        end,
+        -- ruff_lsp = function()
+        --   LazyVim.lsp.on_attach(function(client, _)
+        --     if client.name == "ruff_lsp" then
+        --       -- Disable hover in favor of Pyright
+        --       client.server_capabilities.hoverProvider = false
+        --     end
+        --   end)
+        -- end,
       },
     },
   },
-
   {
     "p00f/clangd_extensions.nvim",
     dependencies = {

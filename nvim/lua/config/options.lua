@@ -33,6 +33,7 @@ vim.opt.mouse = ""
 
 -- python
 vim.g.lazyvim_python_lsp = "pyright"
+-- vim.g.lazyvim_python_ruff = "ruff-lsp"
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
