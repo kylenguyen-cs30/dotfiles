@@ -43,5 +43,12 @@ keymap.set("n", "<C-S-j>", "<C-w>-")
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
-	vim.diagnostic.goto_next()
+  vim.diagnostic.goto_next()
 end, opts)
+
+-- Tmux Navigator Key Mappings
+keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
+keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", opts)
+keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>", opts)
+keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
+keymap.set("n", "<C-\\>", ":TmuxNavigatePrevious<CR>", opts)

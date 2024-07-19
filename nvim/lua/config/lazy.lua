@@ -34,6 +34,12 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.black" },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "plugins" },
+    { -- Add vim-tmux-navigatior plugins
+      "christoomey/vim-tmux-navigator",
+      config = function()
+        vim.g.tmux_navigator_no_mappings = 1
+      end,
+    },
   },
   -- provide the defaults settings for lazy.nvim
   defaults = {
