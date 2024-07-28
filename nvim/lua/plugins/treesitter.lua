@@ -23,6 +23,7 @@ return {
         "toml",
         "svelte",
         "go",
+        -- "prisma",
       },
       query_linter = {
         enable = true,

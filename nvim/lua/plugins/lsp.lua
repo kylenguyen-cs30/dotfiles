@@ -17,6 +17,9 @@ return {
         -- "ruff-lsp",
         "black",
         "pyright",
+        -- "prisma",
+        "prisma-language-server",
+        "marksman",
       })
     end,
   },
@@ -150,6 +153,10 @@ return {
             clangdFileStatus = true,
           },
         },
+
+        marksman = {},
+
+        prismals = {},
 
         svelte = {
           keys = {
