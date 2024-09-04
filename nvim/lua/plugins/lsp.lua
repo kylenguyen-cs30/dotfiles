@@ -20,6 +20,7 @@ return {
         -- "prisma",
         "prisma-language-server",
         "marksman",
+        -- "sourcekit-lsp",
       })
     end,
   },
@@ -64,59 +65,6 @@ return {
           enabled = vim.g.lazyvim_python_lsp == "basedpyright",
           -- enabled = lsp == "basedpyright",
         },
-
-        -- python lint and inlayHints
-        -- ruff_lsp = {
-        --   enabled = vim.g.lazyvim_python_ruff == "ruff_lsp",
-        --   -- enabled = lsp == "ruff_lsp",
-        --   keys = {
-        --     {
-        --       "<leader>co",
-        --       function()
-        --         vim.lsp.buf.code_action({
-        --           apply = true,
-        --           context = {
-        --             only = { "source.organizeImports" },
-        --             diagnostics = {},
-        --           },
-        --         })
-        --       end,
-        --       desc = "Organize Imports",
-        --     },
-        --   },
-        --   on_attach = function(client, bufnr)
-        --     if client.name == "ruff_lsp" then
-        --       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        --       vim.api.nvim_create_autocmd("BufWritePre", {
-        --         group = augroup,
-        --         buffer = bufnr,
-        --         callback = function()
-        --           vim.lsp.buf.format({
-        --             async = false,
-        --             filter = function(client)
-        --               return client.name == "ruff_lsp"
-        --             end,
-        --             timeout_ms = 5000,
-        --           })
-        --         end,
-        --       })
-        --       if client.server_capabilities.inlayHintsProvider then
-        --         vim.lsp.buf.inlay_hints(bufnr, true)
-        --       end
-        --     end
-        --   end,
-        -- },
-
-        -- [ruff] = {
-        --   keys = {
-        --     {
-        --       "<leader>co",
-        --       LazyVim.lsp.action["source.organizeImports"],
-        --       desc = "Organize Imports",
-        --     },
-        --   },
-        -- },
-
         -- C/C++ inlayHints
         clangd = {
           keys = {
@@ -157,6 +105,14 @@ return {
         marksman = {},
 
         prismals = {},
+
+        sourcekit = {
+          cmd = { "/usr/local/bin/sourcekit-lsp" },
+          filetypes = { "swift", "objective-c", "objective-cpp" },
+          settings = {
+            sourcekit = {},
+          },
+        },
 
         svelte = {
           keys = {
@@ -310,15 +266,6 @@ return {
           require("clangd_extensions").setup(vim.tbl_deep_extend("force", clangd_ext_opts or {}, { server = opts }))
           return false
         end,
-
-        -- ruff_lsp = function()
-        --   LazyVim.lsp.on_attach(function(client, _)
-        --     if client.name == "ruff_lsp" then
-        --       -- Disable hover in favor of Pyright
-        --       client.server_capabilities.hoverProvider = false
-        --     end
-        --   end)
-        -- end,
       },
     },
   },

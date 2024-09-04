@@ -24,6 +24,7 @@ return {
         "svelte",
         "go",
         -- "prisma",
+        "swift",
       },
       query_linter = {
         enable = true,
