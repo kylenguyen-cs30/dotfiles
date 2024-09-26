@@ -1,7 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    -- tag = "v0.9.1",
+    tag = "v0.9.1",
     opts = {
       ensure_installed = {
         "javascript",
@@ -18,20 +18,24 @@ return {
         "c",
         "cpp",
         "ninja",
-        "python", -- python is retained
+        "python",
         "rst",
         "toml",
         "svelte",
         "go",
+        -- "prisma",
         "swift",
+        "cmake",
+        "fish",
+        "astro",
+        "php",
+        "java",
+        "gitignore",
       },
       query_linter = {
         enable = true,
         use_virtual_text = true,
         lint_events = { "BufWrite", "CursorHold" },
-      },
-      highlight = {
-        enable = true,
       },
     },
   },

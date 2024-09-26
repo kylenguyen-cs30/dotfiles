@@ -14,20 +14,18 @@ return {
         "css-lsp",
         "clangd",
         "svelte-language-server",
+        -- "ruff-lsp",
         "black",
         "pyright",
+        -- "prisma",
         "prisma-language-server",
         "marksman",
-        "ruff-lsp", -- add ruff-lsp again
+        -- "sourcekit-lsp",
       })
     end,
   },
 
   -- lsp servers
-  {
-    "nvim-neotest/nvim-nio",
-  },
-
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -38,6 +36,7 @@ return {
         -- pyright lsp
         pyright = {
           enabled = vim.g.lazyvim_python_lsp ~= "basedpyright",
+          -- enabled = lsp == "pyright",
           on_attach = function(client, bufnr)
             if client.name == "pyright" then
               vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -54,13 +53,18 @@ return {
                   })
                 end,
               })
-              -- if client.server_capabilities.inlayHintsProvider then
-              --   vim.lsp.buf.inlay_hint(bufnr, true)
-              -- end
+              if client.server_capabilities.inlayHintsProvider then
+                vim.lsp.buf.inlay_hint(bufnr, true)
+              end
             end
           end,
         },
 
+        -- basedpyright
+        basedpyright = {
+          enabled = vim.g.lazyvim_python_lsp == "basedpyright",
+          -- enabled = lsp == "basedpyright",
+        },
         -- C/C++ inlayHints
         clangd = {
           keys = {
@@ -99,11 +103,24 @@ return {
         },
 
         marksman = {},
+
         prismals = {},
+
+        -- sourcekit = {
+        --   cmd = { "/usr/local/bin/sourcekit-lsp" },
+        --   filetypes = { "swift", "objective-c", "objective-cpp" },
+        --   settings = {
+        --     sourcekit = {},
+        --   },
+        -- },
 
         svelte = {
           keys = {
-            { "<leader>co", LazyVim.lsp.action["source.organizeImports"], desc = "Organize Imports" },
+            {
+              "<leader>co",
+              LazyVim.lsp.action["source.organizeImports"],
+              desc = "Organize Imports",
+            },
           },
           capabilities = {
             workspace = {
@@ -178,21 +195,66 @@ return {
         },
 
         lua_ls = {
+          -- enabled = false,
           single_file_support = true,
           settings = {
             Lua = {
-              workspace = { checkThirdParty = false },
+              workspace = {
+                checkThirdParty = false,
+              },
               completion = {
                 workspaceWord = true,
                 callSnippet = "Both",
               },
+              misc = {
+                parameters = {
+                  -- "--log-level=trace",
+                },
+              },
+              hint = {
+                enable = true,
+                setType = false,
+                paramType = true,
+                paramName = "Disable",
+                semicolon = "Disable",
+                arrayIndex = "Disable",
+              },
+              doc = {
+                privateName = { "^_" },
+              },
+              type = {
+                castNumberToInteger = true,
+              },
               diagnostics = {
                 disable = { "incomplete-signature-doc", "trailing-space" },
-                groupSeverity = { strong = "Warning", strict = "Warning" },
+                -- enable = false,
+                groupSeverity = {
+                  strong = "Warning",
+                  strict = "Warning",
+                },
+                groupFileStatus = {
+                  ["ambiguity"] = "Opened",
+                  ["await"] = "Opened",
+                  ["codestyle"] = "None",
+                  ["duplicate"] = "Opened",
+                  ["global"] = "Opened",
+                  ["luadoc"] = "Opened",
+                  ["redefined"] = "Opened",
+                  ["strict"] = "Opened",
+                  ["strong"] = "Opened",
+                  ["type-check"] = "Opened",
+                  ["unbalanced"] = "Opened",
+                  ["unused"] = "Opened",
+                },
+                unusedLocalExclude = { "_*" },
               },
               format = {
                 enable = false,
-                defaultConfig = { indent_style = "space", indent_size = "2" },
+                defaultConfig = {
+                  indent_style = "space",
+                  indent_size = "2",
+                  continuation_indent_size = "2",
+                },
               },
             },
           },
@@ -224,38 +286,6 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
       table.insert(opts.sorting.comparators, 1, require("clangd_extensions.cmp_scores"))
-    end,
-  },
-
-  {
-    "mfussenegger/nvim-dap",
-    config = function(_, opts)
-      -- Set DAP key mappings directly here
-      vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>", { noremap = true, silent = true })
-      vim.keymap.set("n", "<leader>dpr", function()
-        require("dap-python").test_method()
-      end, { noremap = true, silent = true })
-
-      -- Optionally load other DAP settings or configurations
-    end,
-  },
-
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = "mfussenegger/nvim-dap",
-    config = function()
-      local dap = require("dap")
-      local dapui = require("dapui")
-      dapui.setup()
-      dap.listeners.after.event_initialized["dapui_config"] = function()
-        dapui.open()
-      end
-      dap.listeners.before.event_terminated["dapui_config"] = function()
-        dapui.close()
-      end
-      dap.listeners.before.event_exited["dapui_config"] = function()
-        dapui.close()
-      end
     end,
   },
 }
