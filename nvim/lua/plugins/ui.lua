@@ -28,8 +28,6 @@ return {
 
       local opts = {
         options = {
-          -- theme = "catppuccin",
-          theme = "tokyonight",
           globalstatus = vim.o.laststatus == 3,
           disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
         },
@@ -177,7 +175,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 500,
+      timeout = 9000,
       background_colour = "#000000",
       render = "wrapped-compact",
     },

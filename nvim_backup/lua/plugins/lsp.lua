@@ -269,23 +269,23 @@ return {
       },
     },
   },
-  {
-    "p00f/clangd_extensions.nvim",
-    dependencies = {
-      "neovim/nvim-lspconfig",
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-    },
-    config = function()
-      require("clangd_extensions").setup({})
-    end,
-  },
+  -- {
+  --   "p00f/clangd_extensions.nvim",
+  --   dependencies = {
+  --     "neovim/nvim-lspconfig",
+  --     "williamboman/mason.nvim",
+  --     "williamboman/mason-lspconfig.nvim",
+  --   },
+  --   config = function()
+  --     require("clangd_extensions").setup({})
+  --   end,
+  -- },
   {
     "nvim-cmp",
     dependencies = { "hrsh7th/cmp-emoji" },
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
-      table.insert(opts.sorting.comparators, 1, require("clangd_extensions.cmp_scores"))
+      -- table.insert(opts.sorting.comparators, 1, require("clangd_extensions.cmp_scores"))
     end,
   },
 }
