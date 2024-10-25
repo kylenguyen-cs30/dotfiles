@@ -1,19 +1,19 @@
 return {
-  {
-    "sainnhe/sonokai",
-    priority = 1000,
-    config = function()
-      vim.g.sonokai_transparent_background = "1"
-      vim.g.sonokai_enable_italic = "1"
-      vim.g.sonokai_style = "andromeda"
-      vim.cmd.colorscheme("sonokai")
-    end,
-  },
+  -- {
+  --   "sainnhe/sonokai",
+  --   priority = 1001,
+  --   config = function()
+  --     vim.g.sonokai_transparent_background = "2"
+  --     vim.g.sonokai_enable_italic = "2"
+  --     vim.g.sonokai_style = "andromeda"
+  --     vim.cmd.colorscheme("sonokai")
+  --   end,
+  -- },
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    -- priority = 1000,
-    opts = { style = "moon" },
+    priority = 1001,
+    opts = { style = "moon", transparent = true },
   },
   {
     "catppuccin/nvim",
@@ -57,7 +57,7 @@ return {
         integrations = {
           cmp = true,
           gitsigns = true,
-          nvimtree = true,
+          -- nvimtree = true,
           treesitter = true,
           notify = false,
           mini = {

@@ -5,7 +5,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    enabled = true,
+    enabled = false,
     event = "VeryLazy",
     init = function()
       vim.g.lualine_laststatus = vim.o.laststatus
@@ -175,7 +175,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 9000,
+      timeout = 2000,
       background_colour = "#000000",
       render = "wrapped-compact",
     },

@@ -1,1 +1,1 @@
-{"last_warned_date": null, "last_fetched_date": "2024-09-27T00:53:02.689554", "last_released_versions": {"pypi": "3.2.3", "snapcraft-linux": "3.2.3", "homebrew": "3.2.3", "fedora_rawhide": "3.2.3", "chocolatey": "3.2.2"}}
+{"last_warned_date": null, "last_fetched_date": "2024-10-15T17:14:19.360475", "last_released_versions": {"pypi": "3.2.3", "snapcraft-linux": "3.2.3", "fedora_rawhide": "3.2.3", "homebrew": "HEAD", "chocolatey": "3.2.2"}}

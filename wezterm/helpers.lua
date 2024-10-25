@@ -10,13 +10,15 @@ function module.apply_to_config(config)
   config.font_size = 15
   config.hide_tab_bar_if_only_one_tab = true
   config.window_decorations = "RESIZE"
-  config.color_scheme = "Abernathy"
+  -- config.color_scheme = "Abernathy"
+  -- config.color_scheme = "Windows 10 (base16)"
   -- config.color_scheme = "Adventure"
   -- config.color_scheme = "Apple System Colors"
   -- config.color_scheme = "Zenburn"
   -- config.color_scheme = "wilmersdorf"
   -- config.color_scheme = "Wryan"
   -- config.color_scheme = "Catppuccin Mocha"
+  config.color_scheme = "Tokyo Night"
   -- config.color_scheme = "catppuccin-mocha"
   -- config.color_scheme = "Catppuccin Mocha (Gogh)"
 
