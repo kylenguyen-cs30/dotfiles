@@ -17,10 +17,6 @@ return {
     },
     keys = {
       {
-        -- Keybinding to find files in the current working directory
-        -- Press ";f" to trigger Telescope's 'find_files' function
-        -- 'no_ignore = false' ensures that files listed in '.gitignore' are still respected
-        -- 'hidden = true' allows hidden files (dotfiles) to be shown
         ";f",
         function()
           local builtin = require("telescope.builtin")
@@ -32,20 +28,14 @@ return {
         desc = "Lists files in your current working directory, respects .gitignore",
       },
       {
-        -- Keybinding to search for a string within the current working directory
-        -- Press ";r" to trigger live_grep, which searches for text in files
-        -- Results appear dynamically as you type
         ";r",
         function()
           local builtin = require("telescope.builtin")
           builtin.live_grep()
         end,
-        desc =
-        "Search for a string in your current working directory and get results live as you type, respects .gitignore",
+        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
-        -- Keybinding to list open buffers. all buffer available
-        -- Press "\\\\" to show a list of all currently open buffers
         "\\\\",
         function()
           local builtin = require("telescope.builtin")
@@ -54,8 +44,6 @@ return {
         desc = "Lists open buffers",
       },
       {
-        -- Keybinding to resume the last used Telescope picker
-        -- Press ";;" to bring up the previous Telescope search window (useful to resume searches)
         ";;",
         function()
           local builtin = require("telescope.builtin")
@@ -64,8 +52,6 @@ return {
         desc = "Resume the previous telescope picker",
       },
       {
-        -- Keybinding to list diagnostics for all open buffers or a specific buffer
-        -- Press ";e" to display LSP diagnostic messages (errors, warnings, etc.)
         ";e",
         function()
           local builtin = require("telescope.builtin")
@@ -74,14 +60,34 @@ return {
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
       {
-        -- Keybinding to list function names and variables using Treesitter
-        -- Press ";s" to display a Treesitter-based symbol list of functions, variables, etc.
         ";s",
         function()
           local builtin = require("telescope.builtin")
-          builtin.treesitter() --adding treesitter
+          builtin.treesitter()
         end,
         desc = "Lists Function names, variables, from Treesitter",
+      },
+      {
+        "sf",
+        function()
+          local telescope = require("telescope")
+
+          local function telescope_buffer_dir()
+            return vim.fn.expand("%:p:h")
+          end
+
+          telescope.extensions.file_browser.file_browser({
+            path = "%:p:h",
+            cwd = telescope_buffer_dir(),
+            respect_gitignore = false,
+            hidden = true,
+            grouped = true,
+            previewer = false,
+            initial_mode = "normal",
+            layout_config = { height = 40 },
+          })
+        end,
+        desc = "Open File Browser with the path of the current buffer",
       },
     },
     config = function(_, opts)

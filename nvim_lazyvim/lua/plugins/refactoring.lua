@@ -2,7 +2,6 @@ return {
   -- Incremental rename
   {
     "smjonas/inc-rename.nvim",
-    lazy = false,
     cmd = "IncRename",
     keys = {
       {
@@ -22,7 +21,6 @@ return {
   -- Refactoring tool
   {
     "ThePrimeagen/refactoring.nvim",
-    lazy = false,
     keys = {
       {
         "<leader>r",

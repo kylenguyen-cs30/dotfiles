@@ -18,7 +18,10 @@ function module.apply_to_config(config)
   -- config.color_scheme = "wilmersdorf"
   -- config.color_scheme = "Wryan"
   -- config.color_scheme = "Catppuccin Mocha"
-  config.color_scheme = "Tokyo Night"
+  -- config.color_scheme = "Tokyo Night"
+    config.color_scheme = 'One Dark (Gogh)'
+     -- config.color_scheme = 'OneDark (base16)'
+  -- config.color_scheme = "OneHalfDark"
   -- config.color_scheme = "catppuccin-mocha"
   -- config.color_scheme = "Catppuccin Mocha (Gogh)"
 
