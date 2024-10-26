@@ -1,4 +1,3 @@
-
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -33,6 +32,7 @@ return {
       },
       highlight = {
         enable = true,
+        disable = { "comment" }, -- Disable Tree-sitter for comments
       },
     },
   },

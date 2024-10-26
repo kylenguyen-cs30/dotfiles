@@ -1,0 +1,727 @@
+--- Startup times for process: Primary/TUI ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.067  000.067: event init
+000.206  000.138: early init
+000.493  000.288: locale set
+000.529  000.035: init first window
+000.911  000.382: inits 1
+000.917  000.007: window checked
+000.921  000.003: parsing arguments
+001.421  000.039  000.039: require('vim.shared')
+001.502  000.040  000.040: require('vim.inspect')
+001.550  000.036  000.036: require('vim._options')
+001.552  000.127  000.051: require('vim._editor')
+001.553  000.237  000.071: require('vim._init_packages')
+001.555  000.398: init lua interpreter
+001.871  000.315: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.049  000.049: event init
+000.151  000.102: early init
+000.382  000.230: locale set
+000.410  000.029: init first window
+000.662  000.252: inits 1
+000.675  000.013: window checked
+000.678  000.003: parsing arguments
+001.050  000.026  000.026: require('vim.shared')
+001.109  000.029  000.029: require('vim.inspect')
+001.145  000.027  000.027: require('vim._options')
+001.146  000.093  000.038: require('vim._editor')
+001.147  000.145  000.025: require('vim._init_packages')
+001.149  000.326: init lua interpreter
+002.693  001.544: expanding arguments
+002.702  000.009: inits 2
+002.917  000.215: init highlight
+002.918  000.001: waiting for UI
+003.022  000.104: done waiting for UI
+003.027  000.005: clear screen
+003.087  000.009  000.009: require('vim.keymap')
+003.643  000.614  000.605: require('vim._defaults')
+003.644  000.004: init default mappings & autocommands
+004.128  000.045  000.045: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/ftplugin.vim
+004.212  000.022  000.022: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/indent.vim
+005.080  000.554  000.554: require('configs.lazy')
+005.299  000.217  000.217: require('lazy')
+005.351  000.041  000.041: require('ffi')
+005.458  000.066  000.066: require('vim.fs')
+005.637  000.176  000.176: require('vim.uri')
+005.646  000.289  000.048: require('vim.loader')
+006.191  000.528  000.528: require('lazy.stats')
+006.373  000.143  000.143: require('lazy.core.util')
+006.606  000.231  000.231: require('lazy.core.config')
+006.900  000.102  000.102: require('lazy.core.handler')
+007.298  000.165  000.165: require('lazy.pkg')
+007.301  000.296  000.131: require('lazy.core.meta')
+007.307  000.405  000.109: require('lazy.core.plugin')
+007.314  000.706  000.200: require('lazy.core.loader')
+008.245  000.149  000.149: require('lazy.core.fragments')
+010.073  000.115  000.115: require('configs.conform')
+011.350  000.096  000.096: require('lazy.core.handler.event')
+011.353  000.206  000.110: require('lazy.core.handler.ft')
+011.475  000.120  000.120: require('lazy.core.handler.cmd')
+011.564  000.086  000.086: require('lazy.core.handler.keys')
+012.752  000.099  000.099: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+013.102  000.114  000.114: sourcing /Users/kyle/.local/share/nvim/lazy/vim-tmux-navigator/plugin/tmux_navigator.vim
+013.937  000.376  000.376: require('inc_rename')
+014.826  000.117  000.117: require('chadrc')
+015.485  000.924  000.808: require('nvconfig')
+015.707  000.220  000.220: require('nvchad.tabufline.lazyload')
+015.710  001.558  000.413: require('nvchad')
+016.190  000.323  000.323: require('refactoring.command')
+016.195  000.368  000.045: sourcing /Users/kyle/.local/share/nvim/lazy/refactoring.nvim/plugin/command.lua
+016.911  000.098  000.098: require('refactoring.code_generation.utils')
+016.915  000.228  000.130: require('refactoring.code_generation.langs.typescript')
+016.916  000.300  000.072: require('refactoring.code_generation.langs.javascript')
+017.039  000.123  000.123: require('refactoring.code_generation.langs.typescriptreact')
+017.110  000.070  000.070: require('refactoring.code_generation.langs.javascriptreact')
+017.185  000.074  000.074: require('refactoring.code_generation.langs.lua')
+017.265  000.079  000.079: require('refactoring.code_generation.langs.go')
+017.388  000.122  000.122: require('refactoring.code_generation.langs.cpp')
+017.463  000.074  000.074: require('refactoring.code_generation.langs.c')
+017.540  000.076  000.076: require('refactoring.code_generation.langs.python')
+017.615  000.074  000.074: require('refactoring.code_generation.langs.php')
+017.688  000.072  000.072: require('refactoring.code_generation.langs.java')
+017.772  000.084  000.084: require('refactoring.code_generation.langs.cs')
+017.896  000.123  000.123: require('refactoring.code_generation.langs.ruby')
+017.898  001.363  000.093: require('refactoring.code_generation')
+018.021  001.588  000.225: require('refactoring.config')
+018.511  000.026  000.026: sourcing /Users/kyle/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+018.986  000.072  000.072: require('plenary.tbl')
+018.988  000.146  000.073: require('plenary.vararg.rotate')
+018.989  000.235  000.090: require('plenary.vararg')
+019.058  000.069  000.069: require('plenary.errors')
+019.128  000.069  000.069: require('plenary.functional')
+019.130  000.565  000.192: require('plenary.async.async')
+019.450  000.072  000.072: require('plenary.async.structs')
+019.454  000.190  000.118: require('plenary.async.control')
+019.457  000.263  000.073: require('plenary.async.util')
+019.459  000.327  000.064: require('plenary.async.tests')
+019.460  001.286  000.368: require('plenary.async')
+019.461  001.356  000.070: require('refactoring.pipeline')
+019.529  000.067  000.067: require('refactoring.point')
+019.655  000.125  000.125: require('refactoring.region')
+020.142  000.121  000.121: require('refactoring.utils')
+020.752  000.106  000.106: require('vim.treesitter.language')
+020.877  000.124  000.124: require('vim.func')
+020.990  000.108  000.108: require('vim.func._memoize')
+021.011  000.504  000.166: require('vim.treesitter.query')
+021.203  000.191  000.191: require('vim.treesitter._range')
+021.237  000.845  000.151: require('vim.treesitter.languagetree')
+021.255  000.980  000.135: require('vim.treesitter')
+021.282  001.139  000.159: require('refactoring.ts-locals')
+021.304  001.417  000.158: require('refactoring.treesitter.treesitter')
+021.619  000.074  000.074: require('refactoring.query')
+021.621  000.163  000.089: require('refactoring.treesitter.nodes')
+021.622  000.317  000.154: require('refactoring.treesitter.langs.typescript')
+021.697  000.074  000.074: require('refactoring.treesitter.langs.typescriptreact')
+021.769  000.072  000.072: require('refactoring.treesitter.langs.javascriptreact')
+021.840  000.070  000.070: require('refactoring.treesitter.langs.cpp')
+021.954  000.113  000.113: require('refactoring.treesitter.langs.c')
+022.028  000.073  000.073: require('refactoring.treesitter.langs.go')
+022.101  000.073  000.073: require('refactoring.treesitter.langs.lua')
+022.213  000.110  000.110: require('refactoring.treesitter.langs.python')
+022.281  000.068  000.068: require('refactoring.treesitter.langs.javascript')
+022.350  000.068  000.068: require('refactoring.treesitter.langs.php')
+022.421  000.070  000.070: require('refactoring.treesitter.langs.java')
+022.490  000.068  000.068: require('refactoring.treesitter.langs.cs')
+022.558  000.068  000.068: require('refactoring.treesitter.langs.ruby')
+022.560  002.788  000.128: require('refactoring.treesitter')
+022.562  002.906  000.118: require('refactoring.tasks.refactor_setup')
+022.696  000.067  000.067: require('refactoring.tasks.adjust_cursor')
+022.763  000.066  000.066: require('refactoring.tasks.apply_text_edits')
+022.764  000.202  000.069: require('refactoring.tasks.post_refactor')
+022.833  000.068  000.068: require('refactoring.text_edits_utils')
+022.897  000.064  000.064: require('refactoring.debug.debug_utils')
+022.965  000.067  000.067: require('refactoring.tasks.ensure_code_gen')
+023.033  000.067  000.067: require('refactoring.get_select_input')
+023.103  000.069  000.069: require('refactoring.indent')
+023.167  000.064  000.064: require('refactoring.notify')
+023.169  005.147  000.093: require('refactoring.debug.printf')
+023.245  000.075  000.075: require('refactoring.debug.print_var')
+023.313  000.067  000.067: require('refactoring.debug.get_path')
+023.382  000.069  000.069: require('refactoring.debug.cleanup')
+023.384  007.034  000.088: require('refactoring.debug')
+023.385  007.168  000.135: require('refactoring')
+023.842  000.045  000.045: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/editorconfig.lua
+023.957  000.043  000.043: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/man.lua
+024.086  000.090  000.090: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/matchparen.vim
+024.183  000.043  000.043: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/osc52.lua
+024.315  000.032  000.032: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/shada.vim
+024.367  000.009  000.009: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/spellfile.vim
+024.904  000.229  000.229: require('nvchad.options')
+025.165  000.565  000.336: require('options')
+025.244  000.078  000.078: require('nvchad.autocmds')
+025.246  020.913  006.938: sourcing /Users/kyle/.config/nvim/init.lua
+025.251  000.627: sourcing vimrc file(s)
+025.347  000.025  000.025: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+025.521  000.042  000.042: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/synload.vim
+025.568  000.160  000.118: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/syntax.vim
+025.573  000.137: inits 3
+026.897  001.324: reading ShaDa
+026.950  000.052: opening buffers
+026.964  000.014: BufEnter autocommands
+026.966  000.002: editing files in windows
+026.986  000.020: VimEnter autocommands
+027.013  000.026: UIEnter autocommands
+027.191  000.107  000.107: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/autoload/provider/clipboard.vim
+027.195  000.076: before starting main loop
+027.309  000.114: first screen update
+027.310  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Primary/TUI ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.090  000.090: event init
+000.271  000.180: early init
+000.625  000.354: locale set
+000.673  000.048: init first window
+001.098  000.426: inits 1
+001.106  000.008: window checked
+001.110  000.004: parsing arguments
+001.651  000.039  000.039: require('vim.shared')
+001.736  000.042  000.042: require('vim.inspect')
+001.785  000.036  000.036: require('vim._options')
+001.787  000.132  000.054: require('vim._editor')
+001.789  000.250  000.079: require('vim._init_packages')
+001.791  000.431: init lua interpreter
+002.143  000.351: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.055  000.055: event init
+000.165  000.110: early init
+000.406  000.241: locale set
+000.438  000.032: init first window
+000.707  000.269: inits 1
+000.720  000.013: window checked
+000.723  000.003: parsing arguments
+001.147  000.032  000.032: require('vim.shared')
+001.222  000.038  000.038: require('vim.inspect')
+001.265  000.032  000.032: require('vim._options')
+001.266  000.115  000.045: require('vim._editor')
+001.268  000.205  000.059: require('vim._init_packages')
+001.269  000.341: init lua interpreter
+002.987  001.718: expanding arguments
+002.998  000.011: inits 2
+003.222  000.224: init highlight
+003.223  000.001: waiting for UI
+003.329  000.106: done waiting for UI
+003.334  000.005: clear screen
+003.400  000.007  000.007: require('vim.keymap')
+003.917  000.579  000.572: require('vim._defaults')
+003.920  000.007: init default mappings & autocommands
+004.393  000.057  000.057: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/ftplugin.vim
+004.478  000.026  000.026: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/indent.vim
+005.084  000.373  000.373: require('configs.lazy')
+005.236  000.151  000.151: require('lazy')
+005.256  000.012  000.012: require('ffi')
+005.339  000.063  000.063: require('vim.fs')
+005.499  000.139  000.139: require('vim.uri')
+005.507  000.249  000.047: require('vim.loader')
+005.809  000.284  000.284: require('lazy.stats')
+006.031  000.190  000.190: require('lazy.core.util')
+006.321  000.288  000.288: require('lazy.core.config')
+006.585  000.109  000.109: require('lazy.core.handler')
+007.017  000.165  000.165: require('lazy.pkg')
+007.022  000.268  000.103: require('lazy.core.meta')
+007.028  000.442  000.174: require('lazy.core.plugin')
+007.035  000.712  000.161: require('lazy.core.loader')
+007.596  000.159  000.159: require('lazy.core.fragments')
+010.149  000.165  000.165: require('configs.conform')
+011.173  000.193  000.193: require('lazy.core.handler.keys')
+011.337  000.161  000.161: require('lazy.core.handler.event')
+011.477  000.138  000.138: require('lazy.core.handler.ft')
+011.627  000.148  000.148: require('lazy.core.handler.cmd')
+013.590  000.288  000.288: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+014.370  000.388  000.388: require('refactoring.command')
+014.377  000.451  000.063: sourcing /Users/kyle/.local/share/nvim/lazy/refactoring.nvim/plugin/command.lua
+015.367  000.108  000.108: require('refactoring.code_generation.utils')
+015.371  000.236  000.128: require('refactoring.code_generation.langs.typescript')
+015.372  000.347  000.111: require('refactoring.code_generation.langs.javascript')
+015.539  000.166  000.166: require('refactoring.code_generation.langs.typescriptreact')
+015.679  000.139  000.139: require('refactoring.code_generation.langs.javascriptreact')
+015.789  000.109  000.109: require('refactoring.code_generation.langs.lua')
+015.908  000.117  000.117: require('refactoring.code_generation.langs.go')
+016.084  000.175  000.175: require('refactoring.code_generation.langs.cpp')
+016.267  000.182  000.182: require('refactoring.code_generation.langs.c')
+016.418  000.151  000.151: require('refactoring.code_generation.langs.python')
+016.590  000.171  000.171: require('refactoring.code_generation.langs.php')
+016.749  000.158  000.158: require('refactoring.code_generation.langs.java')
+017.059  000.309  000.309: require('refactoring.code_generation.langs.cs')
+017.601  000.536  000.536: require('refactoring.code_generation.langs.ruby')
+017.604  002.711  000.152: require('refactoring.code_generation')
+017.839  003.094  000.383: require('refactoring.config')
+018.733  000.037  000.037: sourcing /Users/kyle/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+019.432  000.086  000.086: require('plenary.tbl')
+019.435  000.167  000.081: require('plenary.vararg.rotate')
+019.436  000.252  000.085: require('plenary.vararg')
+019.516  000.078  000.078: require('plenary.errors')
+019.594  000.077  000.077: require('plenary.functional')
+019.598  000.741  000.334: require('plenary.async.async')
+019.917  000.075  000.075: require('plenary.async.structs')
+019.925  000.166  000.090: require('plenary.async.control')
+019.929  000.250  000.084: require('plenary.async.util')
+019.930  000.331  000.081: require('plenary.async.tests')
+019.932  001.735  000.626: require('plenary.async')
+019.933  001.883  000.147: require('refactoring.pipeline')
+020.009  000.074  000.074: require('refactoring.point')
+020.096  000.087  000.087: require('refactoring.region')
+020.420  000.075  000.075: require('refactoring.utils')
+020.895  000.071  000.071: require('vim.treesitter.language')
+020.959  000.063  000.063: require('vim.func')
+021.029  000.068  000.068: require('vim.func._memoize')
+021.040  000.348  000.146: require('vim.treesitter.query')
+021.110  000.070  000.070: require('vim.treesitter._range')
+021.118  000.522  000.105: require('vim.treesitter.languagetree')
+021.122  000.605  000.083: require('vim.treesitter')
+021.126  000.705  000.100: require('refactoring.ts-locals')
+021.130  000.876  000.096: require('refactoring.treesitter.treesitter')
+021.407  000.125  000.125: require('refactoring.query')
+021.409  000.204  000.079: require('refactoring.treesitter.nodes')
+021.412  000.281  000.077: require('refactoring.treesitter.langs.typescript')
+021.532  000.119  000.119: require('refactoring.treesitter.langs.typescriptreact')
+021.652  000.119  000.119: require('refactoring.treesitter.langs.javascriptreact')
+021.768  000.115  000.115: require('refactoring.treesitter.langs.cpp')
+021.864  000.095  000.095: require('refactoring.treesitter.langs.c')
+022.005  000.140  000.140: require('refactoring.treesitter.langs.go')
+022.109  000.103  000.103: require('refactoring.treesitter.langs.lua')
+022.192  000.082  000.082: require('refactoring.treesitter.langs.python')
+022.280  000.087  000.087: require('refactoring.treesitter.langs.javascript')
+022.365  000.084  000.084: require('refactoring.treesitter.langs.php')
+022.488  000.122  000.122: require('refactoring.treesitter.langs.java')
+022.568  000.078  000.078: require('refactoring.treesitter.langs.cs')
+022.643  000.074  000.074: require('refactoring.treesitter.langs.ruby')
+022.646  002.471  000.094: require('refactoring.treesitter')
+022.647  002.549  000.079: require('refactoring.tasks.refactor_setup')
+022.796  000.076  000.076: require('refactoring.tasks.adjust_cursor')
+022.876  000.079  000.079: require('refactoring.tasks.apply_text_edits')
+022.877  000.230  000.075: require('refactoring.tasks.post_refactor')
+022.983  000.105  000.105: require('refactoring.text_edits_utils')
+023.078  000.094  000.094: require('refactoring.debug.debug_utils')
+023.174  000.095  000.095: require('refactoring.tasks.ensure_code_gen')
+023.272  000.098  000.098: require('refactoring.get_select_input')
+023.474  000.201  000.201: require('refactoring.indent')
+023.564  000.089  000.089: require('refactoring.notify')
+023.566  005.726  000.221: require('refactoring.debug.printf')
+023.666  000.099  000.099: require('refactoring.debug.print_var')
+023.739  000.072  000.072: require('refactoring.debug.get_path')
+023.805  000.066  000.066: require('refactoring.debug.cleanup')
+023.808  009.150  000.093: require('refactoring.debug')
+023.809  009.308  000.158: require('refactoring')
+024.504  000.236  000.236: require('inc_rename')
+024.761  000.110  000.110: sourcing /Users/kyle/.local/share/nvim/lazy/vim-tmux-navigator/plugin/tmux_navigator.vim
+025.627  000.071  000.071: require('chadrc')
+025.929  000.452  000.381: require('nvconfig')
+026.018  000.082  000.082: require('nvchad.stl.utils')
+026.109  000.083  000.083: require('nvchad.tabufline.lazyload')
+026.112  000.924  000.307: require('nvchad')
+026.304  000.044  000.044: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/editorconfig.lua
+026.403  000.057  000.057: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/man.lua
+026.529  000.085  000.085: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/matchparen.vim
+026.650  000.041  000.041: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/osc52.lua
+026.724  000.034  000.034: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/shada.vim
+026.780  000.013  000.013: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/spellfile.vim
+027.269  000.146  000.146: require('nvchad.options')
+027.572  000.515  000.370: require('options')
+027.653  000.080  000.080: require('nvchad.autocmds')
+027.654  023.075  007.666: sourcing /Users/kyle/.config/nvim/init.lua
+027.663  000.586: sourcing vimrc file(s)
+027.762  000.027  000.027: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+027.932  000.036  000.036: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/synload.vim
+027.979  000.155  000.119: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/syntax.vim
+027.985  000.139: inits 3
+029.254  001.269: reading ShaDa
+029.306  000.052: opening buffers
+029.316  000.010: BufEnter autocommands
+029.318  000.002: editing files in windows
+029.340  000.022: VimEnter autocommands
+029.365  000.025: UIEnter autocommands
+029.539  000.102  000.102: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/autoload/provider/clipboard.vim
+029.542  000.076: before starting main loop
+029.666  000.124: first screen update
+029.667  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Primary/TUI ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.068  000.067: event init
+000.365  000.297: early init
+000.750  000.386: locale set
+000.799  000.048: init first window
+001.146  000.347: inits 1
+001.152  000.006: window checked
+001.155  000.003: parsing arguments
+001.962  000.033  000.033: require('vim.shared')
+002.035  000.035  000.035: require('vim.inspect')
+002.076  000.031  000.031: require('vim._options')
+002.078  000.113  000.047: require('vim._editor')
+002.080  000.199  000.054: require('vim._init_packages')
+002.083  000.728: init lua interpreter
+002.336  000.253: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.047  000.046: event init
+000.144  000.097: early init
+000.394  000.250: locale set
+000.426  000.032: init first window
+000.664  000.238: inits 1
+000.675  000.011: window checked
+000.678  000.003: parsing arguments
+001.045  000.028  000.028: require('vim.shared')
+001.105  000.030  000.030: require('vim.inspect')
+001.141  000.027  000.027: require('vim._options')
+001.144  000.097  000.039: require('vim._editor')
+001.145  000.178  000.054: require('vim._init_packages')
+001.146  000.290: init lua interpreter
+002.662  001.516: expanding arguments
+002.671  000.009: inits 2
+002.867  000.195: init highlight
+002.868  000.001: waiting for UI
+002.963  000.096: done waiting for UI
+002.968  000.005: clear screen
+003.023  000.007  000.007: require('vim.keymap')
+003.494  000.523  000.517: require('vim._defaults')
+003.495  000.004: init default mappings & autocommands
+003.899  000.045  000.045: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/ftplugin.vim
+003.971  000.020  000.020: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/indent.vim
+004.751  000.529  000.529: require('configs.lazy')
+004.950  000.198  000.198: require('lazy')
+004.976  000.015  000.015: require('ffi')
+005.104  000.104  000.104: require('vim.fs')
+005.276  000.164  000.164: require('vim.uri')
+005.285  000.307  000.039: require('vim.loader')
+005.571  000.265  000.265: require('lazy.stats')
+005.783  000.176  000.176: require('lazy.core.util')
+006.375  000.591  000.591: require('lazy.core.config')
+006.652  000.100  000.100: require('lazy.core.handler')
+007.101  000.190  000.190: require('lazy.pkg')
+007.105  000.304  000.114: require('lazy.core.meta')
+007.110  000.457  000.153: require('lazy.core.plugin')
+007.117  000.740  000.184: require('lazy.core.loader')
+007.717  000.163  000.163: require('lazy.core.fragments')
+009.340  000.163  000.163: require('configs.conform')
+010.716  000.107  000.107: require('lazy.core.handler.event')
+010.802  000.084  000.084: require('lazy.core.handler.keys')
+010.876  000.073  000.073: require('lazy.core.handler.cmd')
+010.946  000.069  000.069: require('lazy.core.handler.ft')
+012.184  000.113  000.113: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+012.656  000.100  000.100: sourcing /Users/kyle/.local/share/nvim/lazy/vim-tmux-navigator/plugin/tmux_navigator.vim
+013.569  000.513  000.513: require('refactoring.command')
+013.574  000.567  000.054: sourcing /Users/kyle/.local/share/nvim/lazy/refactoring.nvim/plugin/command.lua
+014.464  000.090  000.090: require('refactoring.code_generation.utils')
+014.467  000.237  000.147: require('refactoring.code_generation.langs.typescript')
+014.468  000.426  000.188: require('refactoring.code_generation.langs.javascript')
+014.595  000.126  000.126: require('refactoring.code_generation.langs.typescriptreact')
+014.677  000.081  000.081: require('refactoring.code_generation.langs.javascriptreact')
+014.778  000.100  000.100: require('refactoring.code_generation.langs.lua')
+014.884  000.104  000.104: require('refactoring.code_generation.langs.go')
+014.969  000.085  000.085: require('refactoring.code_generation.langs.cpp')
+015.050  000.080  000.080: require('refactoring.code_generation.langs.c')
+015.195  000.144  000.144: require('refactoring.code_generation.langs.python')
+015.381  000.185  000.185: require('refactoring.code_generation.langs.php')
+015.517  000.136  000.136: require('refactoring.code_generation.langs.java')
+015.599  000.081  000.081: require('refactoring.code_generation.langs.cs')
+015.722  000.121  000.121: require('refactoring.code_generation.langs.ruby')
+015.724  001.783  000.115: require('refactoring.code_generation')
+015.936  002.107  000.325: require('refactoring.config')
+016.707  000.020  000.020: sourcing /Users/kyle/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+017.451  000.071  000.071: require('plenary.tbl')
+017.453  000.202  000.130: require('plenary.vararg.rotate')
+017.454  000.342  000.140: require('plenary.vararg')
+017.534  000.079  000.079: require('plenary.errors')
+017.621  000.086  000.086: require('plenary.functional')
+017.623  000.804  000.297: require('plenary.async.async')
+017.923  000.072  000.072: require('plenary.async.structs')
+017.926  000.147  000.075: require('plenary.async.control')
+017.930  000.224  000.077: require('plenary.async.util')
+017.931  000.306  000.083: require('plenary.async.tests')
+017.932  001.731  000.600: require('plenary.async')
+017.934  001.838  000.107: require('refactoring.pipeline')
+018.062  000.128  000.128: require('refactoring.point')
+018.137  000.074  000.074: require('refactoring.region')
+018.491  000.103  000.103: require('refactoring.utils')
+018.938  000.072  000.072: require('vim.treesitter.language')
+019.005  000.066  000.066: require('vim.func')
+019.074  000.066  000.066: require('vim.func._memoize')
+019.119  000.350  000.146: require('vim.treesitter.query')
+019.203  000.083  000.083: require('vim.treesitter._range')
+019.213  000.540  000.107: require('vim.treesitter.languagetree')
+019.219  000.635  000.094: require('vim.treesitter')
+019.224  000.732  000.097: require('refactoring.ts-locals')
+019.231  000.937  000.102: require('refactoring.treesitter.treesitter')
+019.517  000.079  000.079: require('refactoring.query')
+019.519  000.166  000.088: require('refactoring.treesitter.nodes')
+019.521  000.289  000.123: require('refactoring.treesitter.langs.typescript')
+019.608  000.087  000.087: require('refactoring.treesitter.langs.typescriptreact')
+019.696  000.087  000.087: require('refactoring.treesitter.langs.javascriptreact')
+019.777  000.080  000.080: require('refactoring.treesitter.langs.cpp')
+019.914  000.136  000.136: require('refactoring.treesitter.langs.c')
+020.037  000.123  000.123: require('refactoring.treesitter.langs.go')
+020.118  000.080  000.080: require('refactoring.treesitter.langs.lua')
+020.238  000.119  000.119: require('refactoring.treesitter.langs.python')
+020.348  000.109  000.109: require('refactoring.treesitter.langs.javascript')
+020.424  000.075  000.075: require('refactoring.treesitter.langs.php')
+020.501  000.076  000.076: require('refactoring.treesitter.langs.java')
+020.583  000.081  000.081: require('refactoring.treesitter.langs.cs')
+020.663  000.079  000.079: require('refactoring.treesitter.langs.ruby')
+020.666  002.460  000.102: require('refactoring.treesitter')
+020.667  002.529  000.069: require('refactoring.tasks.refactor_setup')
+020.914  000.103  000.103: require('refactoring.tasks.adjust_cursor')
+021.019  000.104  000.104: require('refactoring.tasks.apply_text_edits')
+021.026  000.358  000.151: require('refactoring.tasks.post_refactor')
+021.149  000.123  000.123: require('refactoring.text_edits_utils')
+021.301  000.151  000.151: require('refactoring.debug.debug_utils')
+021.381  000.080  000.080: require('refactoring.tasks.ensure_code_gen')
+021.469  000.086  000.086: require('refactoring.get_select_input')
+021.540  000.071  000.071: require('refactoring.indent')
+021.603  000.062  000.062: require('refactoring.notify')
+021.605  005.668  000.170: require('refactoring.debug.printf')
+021.676  000.070  000.070: require('refactoring.debug.print_var')
+021.745  000.068  000.068: require('refactoring.debug.get_path')
+021.810  000.064  000.064: require('refactoring.debug.cleanup')
+021.812  008.090  000.111: require('refactoring.debug')
+021.814  008.209  000.119: require('refactoring')
+022.393  000.189  000.189: require('inc_rename')
+022.929  000.113  000.113: require('chadrc')
+023.095  000.359  000.246: require('nvconfig')
+023.189  000.088  000.088: require('nvchad.stl.utils')
+023.292  000.097  000.097: require('nvchad.tabufline.lazyload')
+023.294  000.860  000.316: require('nvchad')
+023.480  000.062  000.062: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/editorconfig.lua
+023.584  000.062  000.062: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/man.lua
+023.718  000.091  000.091: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/matchparen.vim
+023.866  000.056  000.056: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/osc52.lua
+023.974  000.032  000.032: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/shada.vim
+024.031  000.010  000.010: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/spellfile.vim
+024.595  000.191  000.191: require('nvchad.options')
+024.795  000.469  000.278: require('options')
+024.877  000.082  000.082: require('nvchad.autocmds')
+024.879  020.812  006.431: sourcing /Users/kyle/.config/nvim/init.lua
+024.888  000.517: sourcing vimrc file(s)
+024.992  000.025  000.025: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+025.165  000.036  000.036: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/synload.vim
+025.209  000.155  000.118: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/syntax.vim
+025.215  000.147: inits 3
+026.986  001.771: reading ShaDa
+027.038  000.052: opening buffers
+027.050  000.012: BufEnter autocommands
+027.052  000.001: editing files in windows
+027.078  000.026: VimEnter autocommands
+027.097  000.019: UIEnter autocommands
+027.285  000.104  000.104: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/autoload/provider/clipboard.vim
+027.288  000.087: before starting main loop
+027.407  000.119: first screen update
+027.408  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Primary/TUI ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.066  000.065: event init
+000.211  000.145: early init
+000.496  000.285: locale set
+000.535  000.039: init first window
+001.018  000.483: inits 1
+001.025  000.007: window checked
+001.029  000.004: parsing arguments
+001.549  000.037  000.037: require('vim.shared')
+001.633  000.040  000.040: require('vim.inspect')
+001.684  000.039  000.039: require('vim._options')
+001.686  000.134  000.055: require('vim._editor')
+001.687  000.248  000.078: require('vim._init_packages')
+001.689  000.412: init lua interpreter
+002.013  000.323: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.051  000.051: event init
+000.160  000.109: early init
+000.381  000.221: locale set
+000.418  000.037: init first window
+000.681  000.263: inits 1
+000.694  000.012: window checked
+000.697  000.004: parsing arguments
+001.085  000.029  000.029: require('vim.shared')
+001.147  000.030  000.030: require('vim.inspect')
+001.185  000.027  000.027: require('vim._options')
+001.186  000.099  000.041: require('vim._editor')
+001.188  000.182  000.054: require('vim._init_packages')
+001.189  000.311: init lua interpreter
+002.690  001.501: expanding arguments
+002.701  000.011: inits 2
+002.918  000.217: init highlight
+002.919  000.001: waiting for UI
+003.025  000.106: done waiting for UI
+003.030  000.006: clear screen
+003.092  000.007  000.007: require('vim.keymap')
+003.665  000.631  000.624: require('vim._defaults')
+003.667  000.005: init default mappings & autocommands
+004.198  000.046  000.046: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/ftplugin.vim
+004.304  000.020  000.020: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/indent.vim
+005.083  000.535  000.535: require('configs.lazy')
+005.269  000.185  000.185: require('lazy')
+005.293  000.015  000.015: require('ffi')
+005.392  000.075  000.075: require('vim.fs')
+005.590  000.169  000.169: require('vim.uri')
+005.598  000.303  000.059: require('vim.loader')
+005.864  000.250  000.250: require('lazy.stats')
+006.094  000.201  000.201: require('lazy.core.util')
+006.367  000.272  000.272: require('lazy.core.config')
+006.621  000.099  000.099: require('lazy.core.handler')
+006.985  000.150  000.150: require('lazy.pkg')
+006.989  000.263  000.113: require('lazy.core.meta')
+006.995  000.373  000.110: require('lazy.core.plugin')
+006.999  000.631  000.160: require('lazy.core.loader')
+007.667  000.107  000.107: require('lazy.core.fragments')
+009.302  000.112  000.112: require('configs.conform')
+010.362  000.111  000.111: require('lazy.core.handler.keys')
+010.468  000.103  000.103: require('lazy.core.handler.cmd')
+010.565  000.095  000.095: require('lazy.core.handler.event')
+010.654  000.087  000.087: require('lazy.core.handler.ft')
+011.977  000.107  000.107: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+012.903  000.413  000.413: require('refactoring.command')
+012.909  000.465  000.052: sourcing /Users/kyle/.local/share/nvim/lazy/refactoring.nvim/plugin/command.lua
+013.934  000.106  000.106: require('refactoring.code_generation.utils')
+013.937  000.242  000.136: require('refactoring.code_generation.langs.typescript')
+013.938  000.388  000.145: require('refactoring.code_generation.langs.javascript')
+014.057  000.117  000.117: require('refactoring.code_generation.langs.typescriptreact')
+014.145  000.087  000.087: require('refactoring.code_generation.langs.javascriptreact')
+014.234  000.088  000.088: require('refactoring.code_generation.langs.lua')
+014.338  000.103  000.103: require('refactoring.code_generation.langs.go')
+014.429  000.090  000.090: require('refactoring.code_generation.langs.cpp')
+014.547  000.117  000.117: require('refactoring.code_generation.langs.c')
+014.725  000.178  000.178: require('refactoring.code_generation.langs.python')
+014.933  000.207  000.207: require('refactoring.code_generation.langs.php')
+015.133  000.199  000.199: require('refactoring.code_generation.langs.java')
+015.257  000.123  000.123: require('refactoring.code_generation.langs.cs')
+015.331  000.074  000.074: require('refactoring.code_generation.langs.ruby')
+015.333  001.955  000.185: require('refactoring.code_generation')
+015.629  002.433  000.478: require('refactoring.config')
+016.274  000.024  000.024: sourcing /Users/kyle/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+016.922  000.071  000.071: require('plenary.tbl')
+016.924  000.143  000.071: require('plenary.vararg.rotate')
+016.925  000.272  000.129: require('plenary.vararg')
+016.993  000.068  000.068: require('plenary.errors')
+017.062  000.067  000.067: require('plenary.functional')
+017.064  000.720  000.314: require('plenary.async.async')
+017.395  000.069  000.069: require('plenary.async.structs')
+017.399  000.193  000.123: require('plenary.async.control')
+017.402  000.272  000.079: require('plenary.async.util')
+017.404  000.339  000.066: require('plenary.async.tests')
+017.405  001.534  000.452: require('plenary.async')
+017.406  001.653  000.119: require('refactoring.pipeline')
+017.476  000.069  000.069: require('refactoring.point')
+017.554  000.076  000.076: require('refactoring.region')
+017.943  000.077  000.077: require('refactoring.utils')
+018.379  000.068  000.068: require('vim.treesitter.language')
+018.441  000.061  000.061: require('vim.func')
+018.515  000.071  000.071: require('vim.func._memoize')
+018.523  000.301  000.100: require('vim.treesitter.query')
+018.607  000.083  000.083: require('vim.treesitter._range')
+018.617  000.486  000.103: require('vim.treesitter.languagetree')
+018.622  000.569  000.083: require('vim.treesitter')
+018.628  000.684  000.115: require('refactoring.ts-locals')
+018.634  000.862  000.100: require('refactoring.treesitter.treesitter')
+018.927  000.122  000.122: require('refactoring.query')
+018.929  000.206  000.084: require('refactoring.treesitter.nodes')
+018.931  000.296  000.090: require('refactoring.treesitter.langs.typescript')
+019.017  000.085  000.085: require('refactoring.treesitter.langs.typescriptreact')
+019.104  000.087  000.087: require('refactoring.treesitter.langs.javascriptreact')
+019.192  000.087  000.087: require('refactoring.treesitter.langs.cpp')
+019.274  000.080  000.080: require('refactoring.treesitter.langs.c')
+019.421  000.146  000.146: require('refactoring.treesitter.langs.go')
+019.507  000.086  000.086: require('refactoring.treesitter.langs.lua')
+019.595  000.086  000.086: require('refactoring.treesitter.langs.python')
+019.680  000.084  000.084: require('refactoring.treesitter.langs.javascript')
+019.762  000.082  000.082: require('refactoring.treesitter.langs.php')
+019.844  000.081  000.081: require('refactoring.treesitter.langs.java')
+019.970  000.125  000.125: require('refactoring.treesitter.langs.cs')
+020.080  000.109  000.109: require('refactoring.treesitter.langs.ruby')
+020.092  002.470  000.175: require('refactoring.treesitter')
+020.093  002.539  000.069: require('refactoring.tasks.refactor_setup')
+020.350  000.149  000.149: require('refactoring.tasks.adjust_cursor')
+020.477  000.126  000.126: require('refactoring.tasks.apply_text_edits')
+020.487  000.393  000.118: require('refactoring.tasks.post_refactor')
+020.635  000.148  000.148: require('refactoring.text_edits_utils')
+020.724  000.088  000.088: require('refactoring.debug.debug_utils')
+020.816  000.091  000.091: require('refactoring.tasks.ensure_code_gen')
+020.888  000.071  000.071: require('refactoring.get_select_input')
+020.960  000.071  000.071: require('refactoring.indent')
+021.029  000.068  000.068: require('refactoring.notify')
+021.032  005.401  000.133: require('refactoring.debug.printf')
+021.106  000.073  000.073: require('refactoring.debug.print_var')
+021.175  000.068  000.068: require('refactoring.debug.get_path')
+021.243  000.067  000.067: require('refactoring.debug.cleanup')
+021.245  008.151  000.107: require('refactoring.debug')
+021.246  008.301  000.150: require('refactoring')
+021.596  000.104  000.104: sourcing /Users/kyle/.local/share/nvim/lazy/vim-tmux-navigator/plugin/tmux_navigator.vim
+022.053  000.238  000.238: require('inc_rename')
+022.707  000.149  000.149: require('chadrc')
+023.038  000.560  000.411: require('nvconfig')
+023.126  000.082  000.082: require('nvchad.stl.utils')
+023.257  000.126  000.126: require('nvchad.tabufline.lazyload')
+023.260  001.131  000.363: require('nvchad')
+023.409  000.050  000.050: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/editorconfig.lua
+023.544  000.086  000.086: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/man.lua
+023.671  000.086  000.086: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/matchparen.vim
+023.872  000.088  000.088: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/osc52.lua
+023.983  000.033  000.033: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/shada.vim
+024.035  000.010  000.010: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/plugin/spellfile.vim
+024.504  000.152  000.152: require('nvchad.options')
+024.706  000.423  000.271: require('options')
+024.787  000.080  000.080: require('nvchad.autocmds')
+024.788  020.372  006.164: sourcing /Users/kyle/.config/nvim/init.lua
+024.793  000.687: sourcing vimrc file(s)
+024.898  000.028  000.028: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/filetype.lua
+025.070  000.038  000.038: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/synload.vim
+025.119  000.159  000.121: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/syntax/syntax.vim
+025.125  000.145: inits 3
+026.532  001.408: reading ShaDa
+026.586  000.053: opening buffers
+026.606  000.020: BufEnter autocommands
+026.607  000.001: editing files in windows
+026.627  000.021: VimEnter autocommands
+026.650  000.022: UIEnter autocommands
+026.821  000.101  000.101: sourcing /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/autoload/provider/clipboard.vim
+026.825  000.074: before starting main loop
+026.948  000.123: first screen update
+026.949  000.001: --- NVIM STARTED ---
+
